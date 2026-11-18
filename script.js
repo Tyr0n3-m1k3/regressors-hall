@@ -1,3 +1,12 @@
+// Force scroll to top on page reload / refresh
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
 // Fade out blackhole loader screen on page load
 window.addEventListener('load', () => {
   setTimeout(() => {
