@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 });
 
 const novels = [
-  // 5 Published Novels
+  // 7 Published Novels
   { 
     id: 1, 
     title: "Disaster-Level Player Is Too Good at Broadcasting", 
@@ -53,6 +53,24 @@ const novels = [
     img: "images/level0.jpeg", 
     desc: "I am an employee at the Hunters Association, my former dreams of streaming being crushed when my unlevelable rank collided with the reality of the Tower.\n\nEven with no future in ascension, I've still got to make money\n\nBut these hunters I'm managing...they are a bit strange." 
   },
+  { 
+    id: 8, 
+    title: "The Third Generation Chaebol Finds Investing Way Too Easy", 
+    status: "Published", 
+    platform: "Webnovel", 
+    link: "https://www.webnovel.com", // Replace with actual Webnovel link
+    img: "images/investing too easy.jpeg", 
+    desc: "Now live on Webnovel." 
+  },
+  { 
+    id: 14, 
+    title: "The Count Family's Scoundrel Takes It All", 
+    status: "Published", 
+    platform: "Webnovel", 
+    link: "https://www.webnovel.com", // Replace with actual Webnovel link
+    img: "images/new scoundrel.jpeg", 
+    desc: "Now live on Webnovel." 
+  },
   
   // 2 Currently Active Whop Daily Release Novels
   { 
@@ -74,14 +92,12 @@ const novels = [
     desc: "After reaching the summit and met by betrayal, Kang Soo is forced into a contract by the cruel Constellation Stream, and exiled back to Floor 49—a desolate, man-eating wasteland three years in the future to become its floor Boss and stop climbers from ascending the tower.\n\nHe might be a death-magic user, but he's about to make this barren floor the safest, best-fed stop in the entire Tower.\nAnd he'll free humanity while he's at it!. Daily releases live." 
   },
   
-  // 8 Coming Soon Whop Novels (Descriptions removed)
-  { id: 8, title: "The Third Generation Chaebol Finds Investing Way Too Easy", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/investing too easy.jpeg", desc: "" },
+  // 6 Coming Soon Novels
   { id: 9, title: "I Picked Up an Outer God's Grimoire as a Part-time Cafe Worker", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/outergod.jpeg", desc: "" },
   { id: 10, title: "I Returned to 1924 and Started a Mage Company", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/1924mage.jpeg", desc: "" },
   { id: 11, title: "Managing Ghost Stories is Way Too Easy for an Office Worker", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/ghostmanager.jpeg", desc: "" },
   { id: 12, title: "I Raised the Scoundrel Protagonists Too Well", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/raisingprotags.jpeg", desc: "" },
   { id: 13, title: "Monopolizing Skills to the 200th Floor", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/200floor.jpeg", desc: "" },
-  { id: 14, title: "The Count Family's Scoundrel Takes It All", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/new scoundrel.jpeg", desc: "" },
   { id: 15, title: "I'm a Max-Level Space Marine, Please Let Me Quit", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/spacemarine.jpeg", desc: "" }
 ];
 
