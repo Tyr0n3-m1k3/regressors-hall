@@ -167,7 +167,7 @@ function openModal(id) {
   
   let buttonHtml = '';
   if (item.status === 'Coming Soon') {
-    buttonHtml = `<a href="#" class="read-btn" style="opacity: 0.5; pointer-events: none; margin-top: 1rem; display: block; text-align: center;">Coming Soon to Whop</a>`;
+    buttonHtml = `<a href="#" class="read-btn" style="opacity: 0.5; pointer-events: none; margin-top: 1rem; display: block; text-align: center;">Coming Soon</a>`;
   } else if (item.status === 'Whop Live') {
     buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read Daily on Whop</a>`;
   } else {
@@ -198,7 +198,7 @@ function openModal(id) {
 }
 
 function closeModal() {
-  modal.classList.remove('active');
+  modal.classList.res('active');
 }
 
 modal.addEventListener('click', (e) => {
