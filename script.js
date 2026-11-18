@@ -1,17 +1,19 @@
-// Force scroll to top on page reload / refresh
+// Force scroll to top instantly on reload before anything renders
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+window.scrollTo(0, 0);
 
-window.addEventListener('beforeunload', () => {
-  window.scrollTo(0, 0);
-});
+// Lock body scroll immediately on load
+document.body.classList.add('loading');
 
-// Fade out blackhole loader screen on page load
+// Fade out blackhole loader screen on page load and unlock scroll
 window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
   setTimeout(() => {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.add('fade-out');
+    document.body.classList.remove('loading');
   }, 2200);
 });
 
@@ -196,7 +198,6 @@ function openModal(id) {
     </div>
   `;
   
-  // Re-bind close event to the newly injected close button
   document.getElementById('modalClose').addEventListener('click', closeModal);
   modal.classList.add('active');
 }
@@ -205,7 +206,6 @@ function closeModal() {
   modal.classList.remove('active');
 }
 
-// Close when clicking the dark backdrop outside modal-content
 modal.addEventListener('click', (e) => {
   if (e.target === modal) {
     closeModal();
