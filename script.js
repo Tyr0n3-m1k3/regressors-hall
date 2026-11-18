@@ -58,7 +58,7 @@ const novels = [
     title: "The Third Generation Chaebol Finds Investing Way Too Easy", 
     status: "Published", 
     platform: "Webnovel", 
-    link: "https://www.webnovel.com", // Replace with actual Webnovel link
+    link: "https://www.webnovel.com", 
     img: "images/investing too easy.jpeg", 
     desc: "I was a useless bum who knew nothing but how to squander my family's money.\n\nThen, one day, I received a video from my future self attached with news headlines photos.\n[The Fall of a Conglomerate: How the Duan Group Lost Its Multi-Billion-Won Empire.]\n[Duan Family Son Found Dead. Police Suspect Suicide Following Financial Scandal and Family Tragedy.]\n\nFortunately, I was given another chance.\nAnd with it came an ability that lets me see the value of anything I invest in.\n\nStocks? Cryptocurrency? Real estate? Startups?\nIf it's worth investing in, I can see its future.\n\nWell, if making money is this easy, shouldn't I be able to build an empire of my own?" 
   },
@@ -67,7 +67,7 @@ const novels = [
     title: "The Count Family's Scoundrel Takes It All", 
     status: "Published", 
     platform: "Webnovel", 
-    link: "https://www.webnovel.com", // Replace with actual Webnovel link
+    link: "https://www.webnovel.com", 
     img: "images/new scoundrel.jpeg", 
     desc: "When did it all go wrong?\n\nWas it when I couldn't stop drinking? Or when I got banished? Was it when I sold out my own family and country? When I slaughtered the innocent and those weaker than me? Or when I preyed on helpless women in the aftermath of the civil war?\n\nIn the end, it didn't matter.\n\nSo the first thing I did when I returned to the past was beat myself up to a pulp.\n\n[A man who destroyed his own family gets a second chance to become the ancestor of a family that will stand for generations.]" 
   },
@@ -130,7 +130,6 @@ function renderGrid(filter = 'all') {
 const track = document.getElementById('carouselStage');
 const featured = novels.filter(n => n.status !== 'Coming Soon');
 
-// Populate track twice to create a seamless infinite loop animation buffer
 const marqueeItems = [...featured, ...featured];
 
 marqueeItems.forEach((n) => {
@@ -139,7 +138,6 @@ marqueeItems.forEach((n) => {
   card.style.aspectRatio = '1148 / 1532';
   card.innerHTML = `<img src="${n.img}" alt="${n.title}" style="width: 100%; height: 100%; object-fit: cover;">`;
   
-  // Click card to open modal
   card.onclick = () => {
     openModal(n.id);
   };
@@ -155,7 +153,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Modal Logic with Ticket/Card Cover Layout
+// Modal Logic
 const modal = document.getElementById('novelModal');
 
 function openModal(id) {
@@ -174,35 +172,35 @@ function openModal(id) {
     buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read on ${item.platform}</a>`;
   }
 
-  // Inject exact webnovel dimensions ticket card layout into the modal content
   modalContentBox.innerHTML = `
     <button class="modal-close" id="modalClose">&times;</button>
     <div style="display: flex; gap: 1.5rem; flex-direction: ${window.innerWidth < 768 ? 'column' : 'row'}; align-items: center; margin-top: 1rem;">
-      <!-- Cover Ticket Stub with 1148/1532 Aspect Ratio -->
-      <div style="width: 170px; min-width: 170px; aspect-ratio: 1148 / 1532; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px var(--accent-neon-glow);">
+      <div style="width: 170px; min-width: 170px; aspect-ratio: 1148 / 1532; border-radius: 8px; overflow: hidden; box-shadow: 0 0 15px rgba(255,255,255,0.1);">
         <img src="${coverUrl}" alt="${item.title}" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
-      <!-- Ticket Details -->
       <div style="flex-grow: 1; text-align: left;">
         <span class="badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; ${item.status === 'Coming Soon' ? 'border-color: #94a3b8; color: #94a3b8;' : ''}">${item.status}</span>
         <h2 style="font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">${item.title}</h2>
-        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem; white-space: pre-line;">${item.desc || 'Classified archive data. Synopsis unlocks upon release.'}</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem; white-space: pre-line; max-height: 250px; overflow-y: auto;">${item.desc || 'Classified archive data. Synopsis unlocks upon release.'}</p>
         ${buttonHtml}
       </div>
     </div>
   `;
   
-  // Re-bind close event since innerHTML wiped the old button
+  // Re-bind close event to the newly injected close button
   document.getElementById('modalClose').addEventListener('click', closeModal);
   modal.classList.add('active');
 }
 
 function closeModal() {
-  modal.classList.res('active');
+  modal.classList.remove('active');
 }
 
+// Close when clicking the dark backdrop outside modal-content
 modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
+  if (e.target === modal) {
+    closeModal();
+  }
 });
 
 renderGrid();
@@ -217,7 +215,6 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle('active');
   });
 
-  // Close menu automatically when clicking any nav link
   document.querySelectorAll('.nav-item').forEach(link => {
     link.addEventListener('click', () => {
       menuToggle.classList.remove('active');
@@ -225,7 +222,6 @@ if (menuToggle && navLinks) {
     });
   });
 
-  // Close menu when clicking outside the header
   document.addEventListener('click', (e) => {
     if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
       menuToggle.classList.remove('active');
