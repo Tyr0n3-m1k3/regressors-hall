@@ -60,7 +60,7 @@ const novels = [
     platform: "Webnovel", 
     link: "https://www.webnovel.com", // Replace with actual Webnovel link
     img: "images/investing too easy.jpeg", 
-    desc: "Now live on Webnovel." 
+    desc: "I was a useless bum who knew nothing but how to squander my family's money.\n\nThen, one day, I received a video from my future self attached with news headlines photos.\n[The Fall of a Conglomerate: How the Duan Group Lost Its Multi-Billion-Won Empire.]\n[Duan Family Son Found Dead. Police Suspect Suicide Following Financial Scandal and Family Tragedy.]\n\nFortunately, I was given another chance.\nAnd with it came an ability that lets me see the value of anything I invest in.\n\nStocks? Cryptocurrency? Real estate? Startups?\nIf it's worth investing in, I can see its future.\n\nWell, if making money is this easy, shouldn't I be able to build an empire of my own?" 
   },
   { 
     id: 14, 
@@ -69,7 +69,7 @@ const novels = [
     platform: "Webnovel", 
     link: "https://www.webnovel.com", // Replace with actual Webnovel link
     img: "images/new scoundrel.jpeg", 
-    desc: "Now live on Webnovel." 
+    desc: "When did it all go wrong?\n\nWas it when I couldn't stop drinking? Or when I got banished? Was it when I sold out my own family and country? When I slaughtered the innocent and those weaker than me? Or when I preyed on helpless women in the aftermath of the civil war?\n\nIn the end, it didn't matter.\n\nSo the first thing I did when I returned to the past was beat myself up to a pulp.\n\n[A man who destroyed his own family gets a second chance to become the ancestor of a family that will stand for generations.]" 
   },
   
   // 2 Currently Active Whop Daily Release Novels
@@ -186,7 +186,7 @@ function openModal(id) {
       <div style="flex-grow: 1; text-align: left;">
         <span class="badge" style="position: static; display: inline-block; margin-bottom: 0.5rem; ${item.status === 'Coming Soon' ? 'border-color: #94a3b8; color: #94a3b8;' : ''}">${item.status}</span>
         <h2 style="font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">${item.title}</h2>
-        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">${item.desc || 'Classified archive data. Synopsis unlocks upon release.'}</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem; white-space: pre-line;">${item.desc || 'Classified archive data. Synopsis unlocks upon release.'}</p>
         ${buttonHtml}
       </div>
     </div>
