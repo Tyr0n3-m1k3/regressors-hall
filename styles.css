@@ -1,7 +1,7 @@
 :root {
   --bg-dark: #121212;
   --bg-card: #1a1a1a;
-  --accent-neon: #ff0000;
+  --accent-neon: #ffffff;
   --accent-neon-glow: rgba(255, 255, 255, 0.25);
   --accent-red: #e11d48;
   --text-main: #f3f4f6;
@@ -21,6 +21,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Lock scrolling while loading screen is active */
+body.loading {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
 /* Blackhole Loader Container - Pure White Theme */
 .loader-overlay {
   position: fixed;
@@ -31,11 +37,13 @@ body {
   justify-content: center;
   align-items: center;
   transition: opacity 0.8s ease, visibility 0.8s ease;
+  pointer-events: auto;
 }
 
 .loader-overlay.fade-out {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .loader {
@@ -670,14 +678,12 @@ nav a:hover {
 
 /* Mobile Responsive Compact Grids */
 @media screen and (max-width: 768px) {
-  /* Compress novel grid cards to fit 2 or 3 per row on mobile */
   .novel-grid {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 0.75rem !important;
     padding: 0 1rem !important;
   }
 
-  /* Shrink text and padding inside cards for compact view */
   .novel-info {
     padding: 0.5rem !important;
   }
@@ -692,7 +698,7 @@ nav a:hover {
   }
 
   .novel-synopsis {
-    display: none !important; /* Hide synopsis on mobile cards to keep them tight */
+    display: none !important;
   }
 
   .read-btn {
@@ -708,13 +714,11 @@ nav a:hover {
     right: 5px;
   }
 
-  /* Compress marquee/ticker cards in mobile mode */
   .carousel-card {
     width: 110px !important;
     height: 146px !important;
   }
 
-  /* Compress top promotional banner for mobile screens */
   .promo-banner-content {
     flex-direction: column;
     align-items: stretch;
@@ -735,7 +739,6 @@ nav a:hover {
     justify-content: center;
   }
 
-  /* Compress section headers */
   .section-header {
     flex-direction: column;
     align-items: flex-start;
@@ -778,7 +781,6 @@ nav a:hover {
     display: flex;
   }
 
-  /* Hide normal inline nav and turn it into a dropdown drawer */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -809,7 +811,6 @@ nav a:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.04);
   }
 
-  /* Animate Hamburger into an 'X' when active */
   .menu-toggle.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
