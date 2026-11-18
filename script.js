@@ -81,7 +81,7 @@ const novels = [
   { id: 11, title: "Managing Ghost Stories is Way Too Easy for an Office Worker", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/ghostmanager.jpeg", desc: "" },
   { id: 12, title: "I Raised the Scoundrel Protagonists Too Well", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/raisingprotags.jpeg", desc: "" },
   { id: 13, title: "Monopolizing Skills to the 200th Floor", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/200floor.jpeg", desc: "" },
-  { id: 14, title: "The Count Family's Scoundrel Takes It All", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/count family.jpeg", desc: "" },
+  { id: 14, title: "The Count Family's Scoundrel Takes It All", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/new scoundrel.jpeg", desc: "" },
   { id: 15, title: "I'm a Max-Level Space Marine, Please Let Me Quit", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/spacemarine.jpeg", desc: "" }
 ];
 
