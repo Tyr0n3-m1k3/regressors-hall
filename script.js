@@ -75,12 +75,12 @@ const novels = [
   },
   { 
     id: 14, 
-    title: "The Count Family's Scoundrel Takes It All", 
+    title: "To Hell With Regression, I'm Going to Debut!", 
     status: "Published", 
     platform: "Webnovel", 
     link: "https://www.webnovel.com", 
-    img: "images/new scoundrel.jpeg", 
-    desc: "When did it all go wrong?\n\nWas it when I couldn't stop drinking? Or when I got banished? Was it when I sold out my own family and country? When I slaughtered the innocent and those weaker than me? Or when I preyed on helpless women in the aftermath of the civil war?\n\nIn the end, it didn't matter.\n\nSo the first thing I did when I returned to the past was beat myself up to a pulp.\n\n[A man who destroyed his own family gets a second chance to become the ancestor of a family that will stand for generations.]" 
+    img: "images/Hell Debut.jpeg", 
+    desc: "After surviving an apocalypse and finally returning to Earth, I thought I could live a normal life.\n『Contribution to the Completion of the Apocalypse: 0.87%』\n『Your contribution to the world's salvation has been deemed insufficient.』\n『New Objective: Debut as an Idol.』\n『Failure Penalty: Forced Return to the Otherworld.』\n...You've got to be kidding me.\nI have absolutely no intention of going back to that hellhole.\nTo hell with regression. I'm going to debut!" 
   },
   
   // 2 Currently Active Whop Daily Release Novels
