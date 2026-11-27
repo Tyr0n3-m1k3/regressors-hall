@@ -100,7 +100,7 @@ const novels = [
     platform: "Patreon", 
     link: "https://www.patreon.com/14855594/join", 
     img: "images/level99.jpeg", 
-    desc: "After reaching the summit and met by betrayal, Kang Soo is forced into a contract by the cruel Constellation Stream, and exiled back to Floor 49—a desolate, man-eating wasteland three years in the future to become its floor Boss and stop climbers from ascending the tower.\n\nHe might be a death-magic user, but he's about to make this barren floor the safest, best-fed stop in the entire Tower.\nAnd he'll free humanity while he's at it!. Daily releases live." 
+    desc: "After reaching the summit and met by betrayal, Kang Soo is forced into a contract by the cruel Constellation Stream, and exiled back to Floor 49—a desolate, man-eating wasteland three years in the future to become its floor Boss and stop climbers from ascending the tower.\n\nHe might be a death-magic user, but he's about to make this barren floor the safest, best-fed stop in the entire Tower.\nAnd he'll free humanity while he's at it!. Daily releases live on Patreon." 
   },
   
   // 6 Coming Soon Novels
@@ -177,8 +177,8 @@ function openModal(id) {
   let buttonHtml = '';
   if (item.status === 'Coming Soon') {
     buttonHtml = `<a href="#" class="read-btn" style="opacity: 0.5; pointer-events: none; margin-top: 1rem; display: block; text-align: center;">Coming Soon</a>`;
-  } else if (item.platform === 'Patreon') {
-    buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read on Patreon</a>`;
+  } else if (item.status === 'Patreon Live') {
+    buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read Daily on Patreon</a>`;
   } else {
     buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read on ${item.platform}</a>`;
   }
