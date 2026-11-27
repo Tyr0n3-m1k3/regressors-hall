@@ -83,22 +83,22 @@ const novels = [
     desc: "After surviving an apocalypse and finally returning to Earth, I thought I could live a normal life.\n『Contribution to the Completion of the Apocalypse: 0.87%』\n『Your contribution to the world's salvation has been deemed insufficient.』\n『New Objective: Debut as an Idol.』\n『Failure Penalty: Forced Return to the Otherworld.』\n...You've got to be kidding me.\nI have absolutely no intention of going back to that hellhole.\nTo hell with regression. I'm going to debut!" 
   },
   
-  // 2 Currently Active Whop Daily Release Novels
+  // 2 Currently Active Patreon Daily Release Novels
   { 
     id: 6, 
     title: "EX-Grade Summons Live in My Inventory", 
-    status: "Whop Live", 
-    platform: "Whop Hub", 
-    link: "https://whop.com/regressors-hall/ex-grade-summons-live-in-my-inventory-40", 
+    status: "Patreon Live", 
+    platform: "Patreon", 
+    link: "https://www.patreon.com/14855594/join", 
     img: "images/exsummons.jpeg", 
-    desc: "After I got divorced, ex-grade summons started appearing in my inventory. Daily advance chapters live on Whop." 
+    desc: "After I got divorced, ex-grade summons started appearing in my inventory. Daily advance chapters live on Patreon." 
   },
   { 
     id: 7, 
     title: "Level-99 Necromancer is Too Good at Farming", 
-    status: "Whop Live", 
-    platform: "Whop Hub", 
-    link: "https://whop.com/regressors-hall/level-99-necromancer-is-too-good-at-farming-97", 
+    status: "Patreon Live", 
+    platform: "Patreon", 
+    link: "https://www.patreon.com/14855594/join", 
     img: "images/level99.jpeg", 
     desc: "After reaching the summit and met by betrayal, Kang Soo is forced into a contract by the cruel Constellation Stream, and exiled back to Floor 49—a desolate, man-eating wasteland three years in the future to become its floor Boss and stop climbers from ascending the tower.\n\nHe might be a death-magic user, but he's about to make this barren floor the safest, best-fed stop in the entire Tower.\nAnd he'll free humanity while he's at it!. Daily releases live." 
   },
@@ -107,9 +107,9 @@ const novels = [
   { id: 9, title: "I Picked Up an Outer God's Grimoire as a Part-time Cafe Worker", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/outergod.jpeg", desc: "" },
   { id: 10, title: "I Returned to 1924 and Started a Mage Company", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/1924mage.jpeg", desc: "" },
   { id: 11, title: "Managing Ghost Stories is Way Too Easy for an Office Worker", status: "Coming Soon", platform: "Webnovel", link: "#", img: "images/ghostmanager.jpeg", desc: "" },
-  { id: 12, title: "I Raised the Scoundrel Protagonists Too Well", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/raisingprotags.jpeg", desc: "" },
-  { id: 13, title: "Monopolizing Skills to the 200th Floor", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/200floor.jpeg", desc: "" },
-  { id: 15, title: "I'm a Max-Level Space Marine, Please Let Me Quit", status: "Coming Soon", platform: "Whop Hub", link: "#", img: "images/space marine.jpeg", desc: "" }
+  { id: 12, title: "I Raised the Scoundrel Protagonists Too Well", status: "Coming Soon", platform: "Patreon", link: "https://www.patreon.com/14855594/join", img: "images/raisingprotags.jpeg", desc: "" },
+  { id: 13, title: "Monopolizing Skills to the 200th Floor", status: "Coming Soon", platform: "Patreon", link: "https://www.patreon.com/14855594/join", img: "images/200floor.jpeg", desc: "" },
+  { id: 15, title: "I'm a Max-Level Space Marine, Please Let Me Quit", status: "Coming Soon", platform: "Patreon", link: "https://www.patreon.com/14855594/join", img: "images/space marine.jpeg", desc: "" }
 ];
 
 // Render Directory Grid
@@ -177,8 +177,8 @@ function openModal(id) {
   let buttonHtml = '';
   if (item.status === 'Coming Soon') {
     buttonHtml = `<a href="#" class="read-btn" style="opacity: 0.5; pointer-events: none; margin-top: 1rem; display: block; text-align: center;">Coming Soon</a>`;
-  } else if (item.status === 'Whop Live') {
-    buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read Daily on Whop</a>`;
+  } else if (item.platform === 'Patreon') {
+    buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read on Patreon</a>`;
   } else {
     buttonHtml = `<a href="${item.link}" target="_blank" class="read-btn" style="margin-top: 1rem; display: block; text-align: center;">Read on ${item.platform}</a>`;
   }
